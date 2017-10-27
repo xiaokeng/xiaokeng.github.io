@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="赵煜焘的博客">
 <meta property="og:description" content="rem.js123456789101112131415161718192021222324// 需求 ： 根据屏幕的大小动态求得这个屏幕所对应的font-size// 细节：这段JS不要自作聪明添加一个入口函数// 比例公式：设计图的宽度/自己设定的fontsize = 当前的屏幕宽度/这个屏幕对应的fontsize// 获取html对象var oHtml = document.documentE">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-27T12:36:55.684Z">
+<meta property="og:updated_time" content="2017-10-27T13:25:05.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="rem布局js文件">
 <meta name="twitter:description" content="rem.js123456789101112131415161718192021222324// 需求 ： 根据屏幕的大小动态求得这个屏幕所对应的font-size// 细节：这段JS不要自作聪明添加一个入口函数// 比例公式：设计图的宽度/自己设定的fontsize = 当前的屏幕宽度/这个屏幕对应的fontsize// 获取html对象var oHtml = document.documentE">
@@ -373,7 +373,7 @@
       
 
       
-        <h2 id="rem-js"><a href="#rem-js" class="headerlink" title="rem.js"></a>rem.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">// 需求 ： 根据屏幕的大小动态求得这个屏幕所对应的font-size</div><div class="line">// 细节：这段JS不要自作聪明添加一个入口函数</div><div class="line">// 比例公式：设计图的宽度/自己设定的fontsize = 当前的屏幕宽度/这个屏幕对应的fontsize</div><div class="line">// 获取html对象</div><div class="line">var oHtml = document.documentElement;</div><div class="line">// 获取屏幕的大小</div><div class="line">var screenWidth = oHtml.offsetWidth;</div><div class="line">// 设计图的宽度</div><div class="line">var uiWidth = 750;</div><div class="line">// 自己设定的fontsize值</div><div class="line">var font = 40;</div><div class="line"></div><div class="line">// 限制区间</div><div class="line">if(screenWidth &gt;= uiWidth)&#123;</div><div class="line">	// 如果屏幕的宽度大于设计图的宽度就直接定死在设计图对应的font值</div><div class="line">	oHtml.style.fontSize = font + &apos;px&apos;;</div><div class="line">&#125;else if(screenWidth &lt;= 320)&#123;</div><div class="line">	// 如果屏幕的宽度小于320的宽度就直接定死在320对应的font值</div><div class="line">	oHtml.style.fontSize = 320/(uiWidth/font) + &apos;px&apos;;</div><div class="line">&#125;else&#123;</div><div class="line">	// 如果前两者都不满足</div><div class="line">	// 根据比例公式求这个屏幕对应的font值</div><div class="line">	oHtml.style.fontSize = screenWidth/(uiWidth/font) + &apos;px&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h2 id="rem-js"><a href="#rem-js" class="headerlink" title="rem.js"></a>rem.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">// 需求 ： 根据屏幕的大小动态求得这个屏幕所对应的font-size</div><div class="line">// 细节：这段JS不要自作聪明添加一个入口函数</div><div class="line">// 比例公式：设计图的宽度/自己设定的fontsize = 当前的屏幕宽度/这个屏幕对应的fontsize</div><div class="line">// 获取html对象</div><div class="line">var oHtml = document.documentElement;</div><div class="line">// 获取屏幕的大小</div><div class="line">var screenWidth = oHtml.offsetWidth;</div><div class="line">// 设计图的宽度</div><div class="line">var uiWidth = 750;</div><div class="line">// 自己设定的fontsize值</div><div class="line">var font = 40;</div><div class="line">&lt;!-- more --&gt;</div><div class="line">// 限制区间</div><div class="line">if(screenWidth &gt;= uiWidth)&#123;</div><div class="line">	// 如果屏幕的宽度大于设计图的宽度就直接定死在设计图对应的font值</div><div class="line">	oHtml.style.fontSize = font + &apos;px&apos;;</div><div class="line">&#125;else if(screenWidth &lt;= 320)&#123;</div><div class="line">	// 如果屏幕的宽度小于320的宽度就直接定死在320对应的font值</div><div class="line">	oHtml.style.fontSize = 320/(uiWidth/font) + &apos;px&apos;;</div><div class="line">&#125;else&#123;</div><div class="line">	// 如果前两者都不满足</div><div class="line">	// 根据比例公式求这个屏幕对应的font值</div><div class="line">	oHtml.style.fontSize = screenWidth/(uiWidth/font) + &apos;px&apos;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -541,10 +541,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -552,10 +552,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
